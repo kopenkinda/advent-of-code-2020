@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const data = fs.readFileSync('./day01_input.txt').toString().split('\n').map((x) => parseInt(x, 10));
+const data = fs.readFileSync('./input.txt').toString().split('\n').map((x) => parseInt(x, 10));
 
 const first = {
   number: -1,

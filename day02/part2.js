@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const data = fs.readFileSync('./day02_input.txt').toString().split('\n');
+const data = fs.readFileSync('./input.txt').toString().split('\n');
 
 function checkValid(rawData) {
   const [rawPolicy, letterRaw, password] = rawData.split(' ');

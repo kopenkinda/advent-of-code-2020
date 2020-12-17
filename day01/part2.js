@@ -13,7 +13,7 @@ In your expense report, what is the product of the three entries that sum to 202
 
 const fs = require('fs');
 
-const data = fs.readFileSync('./day01_input.txt').toString().split('\n').map((x) => parseInt(x, 10));
+const data = fs.readFileSync('./input.txt').toString().split('\n').map((x) => parseInt(x, 10));
 
 const first = {
   number: -1,
