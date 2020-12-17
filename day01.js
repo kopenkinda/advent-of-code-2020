@@ -11,6 +11,7 @@ const second = {
   number: -1,
   index: -1,
 };
+
 let shouldBreak = false;
 
 for (let index1 = 0; index1 < data.length; index1 += 1) {
