@@ -55,10 +55,10 @@ function run(instructions, changeIndex) {
   return (index === instructions.length - 1) ? acc : null;
 }
 
-const executions = [];
-
 for (let i = 0; i < operations.length; i += 1) {
-  executions.push(run(operations, i));
+  const res = run(operations, i);
+  if (res !== null) {
+    console.log(res);
+    break;
+  }
 }
-
-console.log(executions.filter((x) => x != null)[0]);
