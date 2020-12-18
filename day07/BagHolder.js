@@ -24,6 +24,15 @@ class BagHolder {
     // eslint-disable-next-line prefer-spread
     return [...new Set([].concat.apply([], allParents).concat(parents))];
   }
+
+  getChildrenCount(name) {
+    const bag = this.getBag(name);
+    const { children, amounts } = bag;
+    if (children.length === 0) {
+      return 1;
+    }
+    return children.reduce((acc, v) => acc + amounts[v] * this.getChildrenCount(v), 0) + 1;
+  }
 }
 
 module.exports = { BagHolder };
