@@ -7,7 +7,7 @@ function verifyPassport(rawPassport) {
   let presentFields = 0;
   let hasCID = false;
   const passport = rawPassport.split('\n').join(' ').split(' ').map((x) => x.split(':'));
-  passport.forEach(([field, value]) => {
+  passport.forEach(([field]) => {
     if (neededFields.includes(field)) {
       if (field === 'cid') {
         hasCID = true;
