@@ -9,10 +9,10 @@ const moves = fs.readFileSync('./input.txt', 'utf-8')
     amount: +x.slice(1),
   }));
 
-function manhattan(moves) {
+function manhattan(mvs) {
   const ship = new Ship();
 
-  moves.forEach(({ action, amount }) => {
+  mvs.forEach(({ action, amount }) => {
     switch (action) {
       case 'F': {
         ship.forward(amount);
