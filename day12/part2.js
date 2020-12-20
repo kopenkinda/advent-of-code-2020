@@ -14,7 +14,7 @@ function manhattan(mvs) {
   const ship = new Ship();
   const waypoint = new Waypoint(ship);
 
-  mvs.forEach(({ action, amount }, i) => {
+  mvs.forEach(({ action, amount }) => {
     switch (action) {
       case 'F': {
         ship.moveToWaypoint(waypoint, amount);
