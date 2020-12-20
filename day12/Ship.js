@@ -88,6 +88,11 @@ class Ship {
   manhattan() {
     return Math.abs(this.x) + Math.abs(this.y);
   }
+
+  moveToWaypoint(wp, n) {
+    this.x += wp.x * n;
+    this.y += wp.y * n;
+  }
 }
 
 module.exports = { Ship };
